@@ -1,0 +1,39 @@
+name: "Request repository creation"
+description: Issue form to request a new GitHub Repository in the Gluon organisation
+title: "Create the repository [REPOSITORY-NAME] in the Gluon organisation"
+labels: ["repository request"]
+assignees: 
+  - n395503-sgt_sangroup
+  - n395630-sgt_sangroup
+body:
+- type: input
+  id: repository-name
+  attributes:
+    label: "Repository name"
+    description: "The repository name to be created."
+    placeholder: "gln-repository-name"
+  validations:
+    required: true
+
+- type: input
+  id: repository-description
+  attributes:
+    label: "Repository description"
+    description: "The description you want for your repository. It could be modified or set later."
+  validations:
+    required: false
+
+- type: input
+  id: repository-team-mantainer
+  attributes:
+    label: "Team maintainer"
+    description: "Each repository must have and administration team."
+  validations:
+    required: true
+
+- type: text-area
+  id: repository-template
+
+- type: markdown
+  attributes:
+    value: "[+info](https://santander-group-gluon.github.io/gl-alm-office/pages/requests/requests/#create-new-repository)"
